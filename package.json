@@ -1,0 +1,27 @@
+{
+  "name": "coolier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "npx ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yuko-Yoshida <Yuko-Yoshida@gmail.com> (http://Yuko-Yoshida.example.com)",
+  "dependencies": {
+    "@types/cheerio": "^0.22.13",
+    "@types/request": "^2.48.3",
+    "@types/request-promise": "^4.1.44",
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "typescript": "^3.7.2"
+  }
+}
