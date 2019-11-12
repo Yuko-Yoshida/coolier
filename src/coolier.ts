@@ -83,7 +83,7 @@ async function getArticle(url: string) {
     return { name: $(elem).text(), url: $(elem).children('a').attr('href') }
   }).get()
 
-  const author = { name: $('address').text(), url: $('address').children('a').attr('href') }
+  const author = { name: $('address').children().first().text(), url: $('address').children('a').attr('href') }
 
   // 0   1     2     3   4
   // /sosowa/ssw_l/page/id
@@ -92,7 +92,6 @@ async function getArticle(url: string) {
 
   return { id, page, title, body, afterword, tags, author }
 }
-
 
 export default {
   getIDsFromIndex,
