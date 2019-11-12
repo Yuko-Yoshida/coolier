@@ -67,7 +67,7 @@ async function getArticle(url) {
     const tags = $('#tags').children('ul').children('li').map((_, elem) => {
         return { name: $(elem).text(), url: $(elem).children('a').attr('href') };
     }).get();
-    const author = { name: $('address').text(), url: $('address').children('a').attr('href') };
+    const author = { name: $('address').children().first().text(), url: $('address').children('a').attr('href') };
     // 0   1     2     3   4
     // /sosowa/ssw_l/page/id
     const page = Number(url.split('/')[3]);
